@@ -64,10 +64,13 @@ source env/bin/activate
 4️⃣ Install backend requirements
 
 pip install -r requirements.txt
+# Import products into the database (run once before using the app)
+curl -X POST http://192.168.100.196:8000/Ecommerce/import_products/
+
 
 5️⃣ Run Django server
 
-python manage.py runserver
+ python manage.py runserver 0.0.0.0:8000
 
 Backend will be available at:
 
